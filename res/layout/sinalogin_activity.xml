@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <Button
+        android:id="@+id/weibo_attestation_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/weibo_attestation"
+         />
+
+    <Button
+        android:id="@+id/dangdian_login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/weibo_attestation_button"
+        android:layout_alignBottom="@+id/weibo_attestation_button"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/weibo_attestation_button"
+        android:text="@string/dangdian_login" />
+
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/weibo_attestation_button"
+        android:layout_below="@+id/weibo_attestation_button"
+        android:layout_marginTop="10dp"
+        android:text="@string/logout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/logout_button"
+        android:layout_marginTop="20dp"
+        android:text="使用SSO登录前，请检查手机上是否已经安装新浪微博博客客户端，目前仅3.00及以上微博客户端版本支持SSO；如果为安装，将自动转为Oauth2.0进行认证" />
+
+</RelativeLayout>
