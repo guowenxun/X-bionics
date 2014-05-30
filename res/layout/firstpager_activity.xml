@@ -34,14 +34,57 @@
                     android:background="@drawable/seek" />
             </RelativeLayout>
             
+            <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/product_buy_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="250dp"
+                    android:text="@string/product_buy" />
+
+                <Button
+                    android:id="@+id/man_story_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/product_buy_button"
+                    android:layout_alignBottom="@+id/product_buy_button"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:text="@string/man_story" />
+
+                <Button
+                    android:id="@+id/X_action_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/product_buy_button"
+                    android:layout_below="@+id/product_buy_button"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/X_action" />
+
+                <Button
+                    android:id="@+id/X_introduce_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/X_action_button"
+                    android:layout_alignRight="@+id/man_story_button"
+                    android:text="@string/X_introduce" />
+                
+            </RelativeLayout>
+            
         </FrameLayout>
-  
+            
             <ListView
                 android:id="@+id/drawerlayout_list"
-                android:layout_width="240dp"
+                android:layout_width="260dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
                 android:choiceMode="singleChoice" />
-       
+            
     </android.support.v4.widget.DrawerLayout>
 

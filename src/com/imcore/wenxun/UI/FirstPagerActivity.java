@@ -3,6 +3,8 @@ package com.imcore.wenxun.UI;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.imcore.wenxun.UI.R.drawable;
+
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
@@ -23,20 +25,20 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class FirstPagerActivity extends Activity implements OnClickListener{
-	
+public class FirstPagerActivity extends Activity implements OnClickListener {
+
 	private DrawerLayout mDrawerLayout;
 	private ActionBarDrawerToggle mDrawerToggle;
 	private ListView mDrawerList;
 	private List<String> mList;
-	private Button drawerListButton;
+	private Button drawerListButton,introduceButton,productButton,storyButton,actionButton,tribesquareButton,searchButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.firstpager_activity);
-		
-	    mList=new ArrayList<String>();
+
+		mList = new ArrayList<String>();
 		mList.add("您的订购");
 		mList.add("账户设置");
 		mList.add("达人申请");
@@ -44,15 +46,15 @@ public class FirstPagerActivity extends Activity implements OnClickListener{
 		mList.add("购物车");
 		mList.add("订阅信息");
 		mList.add("分享设置");
-		
-		drawerListButton=(Button) findViewById(R.id.drawerlist_button);
-		drawerListButton.setOnClickListener(this);
-		
-		mDrawerLayout = (DrawerLayout) findViewById(R.id.firstpager_drawerlayout); 
-	    mDrawerList = (ListView) findViewById(R.id.drawerlayout_list);  
-	    mDrawerList.setAdapter(new drawerlistAdapter());
-	    mDrawerList.setOnItemClickListener(item); 
-	    mDrawerToggle=new ActionBarDrawerToggle(this, mDrawerLayout, 0, 0, 0){    	
+
+		ButtonClick();
+
+		mDrawerLayout = (DrawerLayout) findViewById(R.id.firstpager_drawerlayout);
+		mDrawerList = (ListView) findViewById(R.id.drawerlayout_list);
+		mDrawerList.setAdapter(new drawerlistAdapter());
+		mDrawerList.setOnItemClickListener(item);
+		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.drawable.ic_launcher, R.string.drawer_open, R.string.drawer_close) {
+			
 			@Override
 			public void onDrawerClosed(View drawerView) {
 				super.onDrawerClosed(drawerView);
@@ -62,12 +64,12 @@ public class FirstPagerActivity extends Activity implements OnClickListener{
 			public void onDrawerOpened(View drawerView) {
 				super.onDrawerOpened(drawerView);
 			}
-	    	
-	    };
-	    mDrawerLayout.setDrawerListener(mDrawerToggle);				
+
+		};
+		mDrawerLayout.setDrawerListener(mDrawerToggle);
 	}
-	
-	class drawerlistAdapter extends BaseAdapter{
+
+	class drawerlistAdapter extends BaseAdapter {
 
 		@Override
 		public int getCount() {
@@ -86,24 +88,44 @@ public class FirstPagerActivity extends Activity implements OnClickListener{
 
 		@Override
 		public View getView(int position, View view, ViewGroup parent) {
-			view = getLayoutInflater().inflate(R.layout.firstpager_item_activity, null);
-			TextView textView = (TextView) view.findViewById(R.id.firstpage_item_textview);
+			view = getLayoutInflater().inflate(
+					R.layout.firstpager_item_activity, null);
+			TextView textView = (TextView) view
+					.findViewById(R.id.firstpage_item_textview);
 			textView.setText(mList.get(position));
-			
+
 			return view;
 		}
-		
+
 	}
 	
-	public OnItemClickListener item=new OnItemClickListener(){
+	private void ButtonClick(){
+		drawerListButton=(Button) findViewById(R.id.drawerlist_button);
+		drawerListButton.setOnClickListener(this);
+		tribesquareButton=(Button) findViewById(R.id.tribesquare_button);
+		tribesquareButton.setOnClickListener(this);
+		searchButton=(Button) findViewById(R.id.search_button);
+		searchButton.setOnClickListener(this);
+		productButton=(Button) findViewById(R.id.product_buy_button);
+		productButton.setOnClickListener(this);
+		storyButton=(Button) findViewById(R.id.man_story_button);
+		storyButton.setOnClickListener(this);
+		actionButton=(Button) findViewById(R.id.X_action_button);
+		actionButton.setOnClickListener(this);
+		introduceButton=(Button) findViewById(R.id.X_introduce_button);
+		introduceButton.setOnClickListener(this);
+		
+	}
+
+	public OnItemClickListener item = new OnItemClickListener() {
 
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
-			Intent intent = null;
 			switch (position) {
 			case 3:
-				intent = new Intent(FirstPagerActivity.this, LoginMainActivity.class);
+				Intent intent = new Intent(FirstPagerActivity.this,
+						LoginMainActivity.class);
 				startActivity(intent);
 				break;
 
@@ -111,14 +133,14 @@ public class FirstPagerActivity extends Activity implements OnClickListener{
 				break;
 			}
 			mDrawerLayout.closeDrawer(mDrawerList);
-		}};
-
-		@Override
-		public boolean onCreateOptionsMenu(Menu menu) {
-			getMenuInflater().inflate(R.menu.main, menu);
-			return true;
 		}
+	};
 
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
 
 	@Override
 	public void onClick(View v) {
@@ -126,10 +148,10 @@ public class FirstPagerActivity extends Activity implements OnClickListener{
 		case R.id.drawerlist_button:
 			mDrawerLayout.openDrawer(mDrawerList);
 			break;
-		default:
+		case R.id.tribesquare_button:
 			break;
 
 		}
-		
+
 	}
 }

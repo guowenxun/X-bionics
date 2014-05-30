@@ -16,7 +16,13 @@
     <string name="weibo_attestation">微博认证OAUTH2.0</string>
     <string name="dangdian_login">单点登录sso</string>
     <color name="demo">#eb3c12</color>
-    
-    <string name="drawer_open">Open navigation drawer</string>  
-    <string name="drawer_close">Close navigation drawer</string>  
+    <string name="product_buy">产品购买</string> 
+    <string name="man_story">达人故事</string>
+    <string name="X_action">X的活动</string>
+    <string name="X_introduce">X的介绍</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="title_activity_search_pager_activity">SearchPager_activity</string>
+    <string name="search">搜索</string>
+
 </resources>

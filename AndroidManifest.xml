@@ -7,9 +7,10 @@
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="19" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -19,25 +20,27 @@
         <activity
             android:name="com.imcore.wenxun.UI.LoadingActivity"
             android:label="@string/app_name"
-            android:theme ="@style/AppBaseTheme">
+            android:theme="@style/AppBaseTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        <activity android:name="com.imcore.wenxun.UI.LoginMainActivity"/>
-        <activity android:name="com.imcore.wenxun.UI.XLLoginActivity"/>
-        <activity android:name="com.imcore.wenxun.UI.TXLoginActivity"/>
-        <activity android:name="com.imcore.wenxun.UI.TribeLoginActivity"/>
-        <activity android:name="com.imcore.wenxun.UI.HelpActivity"/>
-        <activity android:name="com.imcore.wenxun.UI.PhoneRegisterActivity"/>
-        <activity android:name="com.imcore.wenxun.UI.PhoneRegisterInfoActivity"/>
-        <activity android:name="com.imcore.wenxun.UI.RegisterMainActivity"/>
-        <activity android:name="com.imcore.wenxun.UI.ServiceItemActivity"/>
-        <activity android:name="com.imcore.wenxun.UI.FirstPagerActivity"/>
-        
+        <activity android:name="com.imcore.wenxun.UI.LoginMainActivity" />
+        <activity android:name="com.imcore.wenxun.UI.XLLoginActivity" />
+        <activity android:name="com.imcore.wenxun.UI.TXLoginActivity" />
+        <activity android:name="com.imcore.wenxun.UI.TribeLoginActivity" />
+        <activity android:name="com.imcore.wenxun.UI.HelpActivity" />
+        <activity android:name="com.imcore.wenxun.UI.PhoneRegisterActivity" />
+        <activity android:name="com.imcore.wenxun.UI.PhoneRegisterInfoActivity" />
+        <activity android:name="com.imcore.wenxun.UI.RegisterMainActivity" />
+        <activity android:name="com.imcore.wenxun.UI.ServiceItemActivity" />
+        <activity android:name="com.imcore.wenxun.UI.FirstPagerActivity" />
+        <activity
+            android:name="com.imcore.wenxun.UI.SearchPager_activity"
+            android:label="@string/title_activity_search_pager_activity" >
+        </activity>
     </application>
 
 </manifest>
