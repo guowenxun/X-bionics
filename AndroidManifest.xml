@@ -37,10 +37,8 @@
         <activity android:name="com.imcore.wenxun.UI.RegisterMainActivity" />
         <activity android:name="com.imcore.wenxun.UI.ServiceItemActivity" />
         <activity android:name="com.imcore.wenxun.UI.FirstPagerActivity" />
-        <activity
-            android:name="com.imcore.wenxun.UI.SearchPager_activity"
-            android:label="@string/title_activity_search_pager_activity" >
-        </activity>
+        <activity android:name="com.imcore.wenxun.UI.SearchPager_activity" />
+       
     </application>
 
 </manifest>

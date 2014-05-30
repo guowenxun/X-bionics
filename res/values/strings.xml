@@ -22,7 +22,7 @@
     <string name="X_introduce">X的介绍</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
-    <string name="title_activity_search_pager_activity">SearchPager_activity</string>
     <string name="search">搜索</string>
+    <string name="search_object">请输入要查找的产品</string>
 
 </resources>

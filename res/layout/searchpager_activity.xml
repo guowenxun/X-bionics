@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-  >
+    android:orientation="vertical">
  
     <FrameLayout 
         android:layout_width="match_parent"
@@ -27,9 +27,41 @@
         
     </FrameLayout>
     
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        
+        <EditText
+            android:id="@+id/product_search_edittext" 
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_gravity="center"
+             android:gravity="center"
+             android:hint="@string/search_object"
+             android:background="@drawable/findbarbackground"/>
+        
+        <Button 
+            android:id="@+id/product_find_button"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/productfindbtn"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="10dp"
+            />
+        
+    </FrameLayout>
     
+    <ImageView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dottedline"/>
+
+    <GridView
+        android:id="@+id/product_search_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3" >
+    </GridView>
     
-    
-    
- </RelativeLayout>
+ </LinearLayout>
 
