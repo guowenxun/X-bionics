@@ -5,6 +5,7 @@ import java.util.List;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
@@ -28,6 +29,7 @@ public class FirstPagerActivity extends Activity implements OnClickListener{
 	private ActionBarDrawerToggle mDrawerToggle;
 	private ListView mDrawerList;
 	private List<String> mList;
+	private Button drawerListButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,15 +44,27 @@ public class FirstPagerActivity extends Activity implements OnClickListener{
 		mList.add("购物车");
 		mList.add("订阅信息");
 		mList.add("分享设置");
-		 
+		
+		drawerListButton=(Button) findViewById(R.id.drawerlist_button);
+		drawerListButton.setOnClickListener(this);
+		
+		mDrawerLayout = (DrawerLayout) findViewById(R.id.firstpager_drawerlayout); 
 	    mDrawerList = (ListView) findViewById(R.id.drawerlayout_list);  
 	    mDrawerList.setAdapter(new drawerlistAdapter());
-	    mDrawerList.setOnItemClickListener(item);
-	    
-	    mDrawerLayout = (DrawerLayout) findViewById(R.id.firstpager_drawerlayout); 
-	    mDrawerToggle=new ActionBarDrawerToggle(this, mDrawerLayout, 0, 0, 0);
-	    mDrawerLayout.setDrawerListener(mDrawerToggle);
-				
+	    mDrawerList.setOnItemClickListener(item); 
+	    mDrawerToggle=new ActionBarDrawerToggle(this, mDrawerLayout, 0, 0, 0){    	
+			@Override
+			public void onDrawerClosed(View drawerView) {
+				super.onDrawerClosed(drawerView);
+			}
+
+			@Override
+			public void onDrawerOpened(View drawerView) {
+				super.onDrawerOpened(drawerView);
+			}
+	    	
+	    };
+	    mDrawerLayout.setDrawerListener(mDrawerToggle);				
 	}
 	
 	class drawerlistAdapter extends BaseAdapter{
@@ -86,32 +100,36 @@ public class FirstPagerActivity extends Activity implements OnClickListener{
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
-			switch(position){
-			
-			
+			Intent intent = null;
+			switch (position) {
+			case 3:
+				intent = new Intent(FirstPagerActivity.this, LoginMainActivity.class);
+				startActivity(intent);
+				break;
+
+			default:
+				break;
 			}
+			mDrawerLayout.closeDrawer(mDrawerList);
 		}};
 
-		
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		return super.onCreateOptionsMenu(menu);
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		return super.onOptionsItemSelected(item);
-	}
-
-
-
-
+		@Override
+		public boolean onCreateOptionsMenu(Menu menu) {
+			getMenuInflater().inflate(R.menu.main, menu);
+			return true;
+		}
 
 
 	@Override
 	public void onClick(View v) {
-		if(v.getId()==R.id.drawwelist_button){
+		switch (v.getId()) {
+		case R.id.drawerlist_button:
 			mDrawerLayout.openDrawer(mDrawerList);
+			break;
+		default:
+			break;
+
 		}
+		
 	}
 }

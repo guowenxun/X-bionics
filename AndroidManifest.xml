@@ -26,6 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
         <activity android:name="com.imcore.wenxun.UI.LoginMainActivity"/>
         <activity android:name="com.imcore.wenxun.UI.XLLoginActivity"/>
         <activity android:name="com.imcore.wenxun.UI.TXLoginActivity"/>
