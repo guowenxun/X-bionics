@@ -1,32 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
+-
 
     <android.support.v4.widget.DrawerLayout
-        android:id="@+id/drawerlayoutId"
+        android:id="@+id/firstpager_drawerlayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-    >
-        <FrameLayout 
+        android:layout_height="match_parent" >
+-
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            
-            <Button 
-                android:id="@+id/drawerlayout_button"
+            android:layout_height="match_parent" >
+-
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-            
+                android:layout_height="50dp" >
+
+                <Button
+                    android:id="@+id/tribesquare_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/buluo" />
+
+                <Button
+                    android:id="@+id/drawwelist_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/listbutton" />
+
+                <Button
+                    android:id="@+id/drawwelist_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/seek" />
+            </RelativeLayout>
         </FrameLayout>
-            
-        
-        
+-
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/head_imageview"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:background="@drawable/head" />
+
+            <ListView
+                android:id="@+id/drawerlayout_list"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:choiceMode="singleChoice" />
+        </LinearLayout>
     </android.support.v4.widget.DrawerLayout>
 
-    <ListView
-        android:id="@+id/left_listviewId"
-        android:layout_width="200dp"
-        android:layout_height="match_parent"
-        />
-    
 </RelativeLayout>

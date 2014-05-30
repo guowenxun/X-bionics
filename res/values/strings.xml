@@ -16,5 +16,7 @@
     <string name="weibo_attestation">微博认证OAUTH2.0</string>
     <string name="dangdian_login">单点登录sso</string>
     <color name="demo">#eb3c12</color>
-
+    
+    <string name="drawer_open">Open navigation drawer</string>  
+    <string name="drawer_close">Close navigation drawer</string>  
 </resources>
