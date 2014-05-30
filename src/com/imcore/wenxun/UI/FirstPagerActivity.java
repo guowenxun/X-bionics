@@ -148,6 +148,10 @@ public class FirstPagerActivity extends Activity implements OnClickListener {
 		case R.id.drawerlist_button:
 			mDrawerLayout.openDrawer(mDrawerList);
 			break;
+		case R.id.product_buy_button:
+		 Intent intent=new Intent(FirstPagerActivity.this,SearchPagerActivity.class);
+		 startActivity(intent);
+			break;
 		case R.id.tribesquare_button:
 			break;
 

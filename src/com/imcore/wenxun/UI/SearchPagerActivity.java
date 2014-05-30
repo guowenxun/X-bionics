@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.GridView;
 import android.os.Build;
 
-public class SearchPager_activity extends Activity {
+public class SearchPagerActivity extends Activity {
 
 	private GridView mGridView;
 	private Button productButton;
