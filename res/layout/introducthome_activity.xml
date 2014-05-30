@@ -10,7 +10,6 @@
         android:background="@drawable/title_back"
         android:gravity="center"
         android:text="@string/X_introduce"
-        android:textColor="#919290"
         android:textSize="25dp" />
     
     
