@@ -31,7 +31,8 @@ public class FirstPagerActivity extends Activity implements OnClickListener {
 	private ActionBarDrawerToggle mDrawerToggle;
 	private ListView mDrawerList;
 	private List<String> mList;
-	private Button drawerListButton,introduceButton,productButton,storyButton,actionButton,tribesquareButton,searchButton;
+	private Button drawerListButton, introduceButton, productButton,
+			storyButton, actionButton, tribesquareButton, searchButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +54,10 @@ public class FirstPagerActivity extends Activity implements OnClickListener {
 		mDrawerList = (ListView) findViewById(R.id.drawerlayout_list);
 		mDrawerList.setAdapter(new drawerlistAdapter());
 		mDrawerList.setOnItemClickListener(item);
-		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.drawable.ic_launcher, R.string.drawer_open, R.string.drawer_close) {
-			
+		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
+				R.drawable.ic_launcher, R.string.drawer_open,
+				R.string.drawer_close) {
+
 			@Override
 			public void onDrawerClosed(View drawerView) {
 				super.onDrawerClosed(drawerView);
@@ -98,23 +101,23 @@ public class FirstPagerActivity extends Activity implements OnClickListener {
 		}
 
 	}
-	
-	private void ButtonClick(){
-		drawerListButton=(Button) findViewById(R.id.drawerlist_button);
+
+	private void ButtonClick() {
+		drawerListButton = (Button) findViewById(R.id.drawerlist_button);
 		drawerListButton.setOnClickListener(this);
-		tribesquareButton=(Button) findViewById(R.id.tribesquare_button);
+		tribesquareButton = (Button) findViewById(R.id.tribesquare_button);
 		tribesquareButton.setOnClickListener(this);
-		searchButton=(Button) findViewById(R.id.search_button);
+		searchButton = (Button) findViewById(R.id.search_button);
 		searchButton.setOnClickListener(this);
-		productButton=(Button) findViewById(R.id.product_buy_button);
+		productButton = (Button) findViewById(R.id.product_buy_button);
 		productButton.setOnClickListener(this);
-		storyButton=(Button) findViewById(R.id.man_story_button);
+		storyButton = (Button) findViewById(R.id.man_story_button);
 		storyButton.setOnClickListener(this);
-		actionButton=(Button) findViewById(R.id.X_action_button);
+		actionButton = (Button) findViewById(R.id.X_action_button);
 		actionButton.setOnClickListener(this);
-		introduceButton=(Button) findViewById(R.id.X_introduce_button);
+		introduceButton = (Button) findViewById(R.id.X_introduce_button);
 		introduceButton.setOnClickListener(this);
-		
+
 	}
 
 	public OnItemClickListener item = new OnItemClickListener() {
@@ -149,8 +152,14 @@ public class FirstPagerActivity extends Activity implements OnClickListener {
 			mDrawerLayout.openDrawer(mDrawerList);
 			break;
 		case R.id.product_buy_button:
-		 Intent intent=new Intent(FirstPagerActivity.this,SearchPagerActivity.class);
-		 startActivity(intent);
+			Intent product = new Intent(FirstPagerActivity.this,
+					SearchPagerActivity.class);
+			startActivity(product);
+			break;
+		case R.id.X_introduce_button:
+			Intent introduce = new Intent(FirstPagerActivity.this,
+					IntroductionHomeActivity.class);
+			startActivity(introduce);
 			break;
 		case R.id.tribesquare_button:
 			break;

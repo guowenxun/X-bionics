@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/title_back"
+        android:gravity="center"
+        android:text="@string/X_introduce"
+        android:textColor="#919290"
+        android:textSize="25dp" />
+    
+    
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/Brand_history_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/histroy" />
+
+            <Button
+                android:id="@+id/award_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/awareimg" />
+
+            <Button
+                android:id="@+id/bionic_model_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bionicprototype" />
+
+            <Button
+                android:id="@+id/production_base_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/productionbase" />
+            
+            <Button
+                android:id="@+id/disign_develop_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/designanddevelopemt" />
+        </LinearLayout>
+        
+    </ScrollView>
+
+
+</LinearLayout>
