@@ -15,19 +15,18 @@ import java.util.Set;
 
 import android.util.Log;
 
-import android.util.Log;
-
 /**
  * HTTP网络访问相关方法
  * 
- * @author chen
+ * @author guo
  */
 public class HttpHelper {
-	private static final String DOMAIN_URL = "http://bulo2bulo.com:8080/mobile/api";
+	public static final String DOMAIN_URL = "http://bulo2bulo.com:8080/mobile/api";
+	public static final String IMAGE_URL = "http://bulo2bulo.com:8080/";
 
 	private static final String LOG_HTTP_POST_INFO = "REQUEST";
-	private static final String LOG_HTTP_GET_ERROR = "com.imcore.x_bionic.http.GetError";
-	private static final String LOG_HTTP_POST_ERROR = "com.imcore.x_bionic.http.PostError";
+	private static final String LOG_HTTP_GET_ERROR = "com.imcore.common.http.GetError";
+	private static final String LOG_HTTP_POST_ERROR = "com.imcore.common.http.PostError";
 
 	private static final String CONTENT_TYPE_URL_ENCODED = "application/x-www-form-urlencoded";
 	private static final String CHARSET = "utf-8";
@@ -43,7 +42,7 @@ public class HttpHelper {
 	public synchronized static String execute(RequestEntity entity)
 			throws Exception {
 		String jsonResult = "";
-
+//
 		String url = DOMAIN_URL + entity.getUrl();
 		switch (entity.getMethod()) {
 		case HttpMethod.GET:

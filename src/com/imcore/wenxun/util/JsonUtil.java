@@ -19,7 +19,7 @@ import android.util.Log;
  * @author Li Bin
  */
 public class JsonUtil<T> {
-	private static final String LOG_JSON_ERROR = "com.imcore.wenxun.util.JsonError";
+	private static final String LOG_JSON_ERROR = "com.imcore.x-bionic.util.JsonError";
 
 	private static final String BYTE = "java.lang.Byte";
 	private static final String INTEGER = "java.lang.Integer";

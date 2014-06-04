@@ -35,30 +35,9 @@
         </RelativeLayout>
     </FrameLayout>
 
-    <LinearLayout 
+    <ExpandableListView 
+        android:id="@+id/productbuy_expandablelistview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-        
-    <ImageView
-        android:id="@+id/upbackground_imageview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/upbackground" />
+        android:layout_height="match_parent"/>
     
-    </LinearLayout>
-    
-    <LinearLayout 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-        
-    <ImageView
-        android:id="@+id/downbackground_imageview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/downbackground" />
-    
-    </LinearLayout>
-
 </LinearLayout>
