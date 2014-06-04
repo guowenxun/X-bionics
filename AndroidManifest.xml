@@ -39,6 +39,9 @@
         <activity android:name="com.imcore.wenxun.UI.FirstPagerActivity" />
         <activity android:name="com.imcore.wenxun.UI.SearchPagerActivity" />
         <activity android:name="com.imcore.wenxun.UI.IntroductionHomeActivity"/>
+        <activity android:name="com.imcore.wenxun.UI.ProductBuyActivity"/>
+        <activity android:name="com.imcore.wenxun.UI.ClassifyAndSearch"/>
+       
     </application>
 
 </manifest>
