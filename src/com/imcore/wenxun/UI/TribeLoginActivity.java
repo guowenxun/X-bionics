@@ -65,6 +65,7 @@ public class TribeLoginActivity extends Activity implements OnClickListener{
 
 		
 		protected void doLogin() {
+		  
 			if (ConnectivityUtil.isOnline(this)) {
 				String UserName = userEditText.getText().toString().trim();
 				String Password = passwordEditText.getText().toString().trim();

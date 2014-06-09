@@ -25,8 +25,8 @@ public class HttpHelper {
 	public static final String IMAGE_URL = "http://bulo2bulo.com:8080/";
 
 	private static final String LOG_HTTP_POST_INFO = "REQUEST";
-	private static final String LOG_HTTP_GET_ERROR = "com.imcore.common.http.GetError";
-	private static final String LOG_HTTP_POST_ERROR = "com.imcore.common.http.PostError";
+	private static final String LOG_HTTP_GET_ERROR = "com.imcore.wenxun.HTTP.GetError";
+	private static final String LOG_HTTP_POST_ERROR = "com.imcore.wenxun.HTTP.PostError";
 
 	private static final String CONTENT_TYPE_URL_ENCODED = "application/x-www-form-urlencoded";
 	private static final String CHARSET = "utf-8";

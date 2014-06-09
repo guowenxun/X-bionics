@@ -201,7 +201,7 @@ public class ProductBuyActivity extends Activity {
 					
 					@Override
 					public void onClick(View v) {
-						Intent intent = new Intent(ProductBuyActivity.this,ClassifyAndSearch.class);
+						Intent intent = new Intent(ProductBuyActivity.this,ProductDetail.class);
 						startActivity(intent);
 					}
 				});
