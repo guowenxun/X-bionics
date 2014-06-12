@@ -6,5 +6,6 @@ public class Category {
 	public String name;
 	public String imageUrl;
 	public int state;
+	public int code;
 	
 }
