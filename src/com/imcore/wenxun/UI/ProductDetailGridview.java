@@ -21,6 +21,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -80,11 +82,25 @@ public class ProductDetailGridview extends Fragment{
 		@Override
 		protected void onPostExecute(Void result) {
 			mGridView.setAdapter(new girdviewAdapter());
+			mGridView.setOnItemClickListener(gridviewItem);
 			super.onPostExecute(result);			
 		}
 		
 		
 	}
+	
+	private OnItemClickListener gridviewItem=new OnItemClickListener(){
+
+		@Override
+		public void onItemClick(AdapterView<?> parent, View view, int position,
+				long id) {
+			Intent intent=new Intent(getActivity(),ProductInformationActivity.class);
+			intent.putExtra("id", id);
+			startActivity(intent);
+			
+		}
+		
+	};
 	
 	private class girdviewAdapter extends BaseAdapter{
 
