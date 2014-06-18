@@ -24,6 +24,8 @@
     <string name="drawer_close">Close navigation drawer</string>
     <string name="search">搜索</string>
     <string name="product_detail">商品详情</string>
-
+    <string name="myshoppingcart">我的购物车</string>
+    <string name="settle_accounts">结算</string>
+    <string name="product_information">商品信息</string>
 
 </resources>

@@ -7,7 +7,6 @@ public class ProductDetailModel {
 	public String name;
 	public int price;
 	public String data;
-	public int serialNo;
 	public String imageUrl;
 	
 	

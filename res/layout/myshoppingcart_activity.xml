@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+    <FrameLayout
+        android:id="@+id/shoppingcar_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/title_back"
+                android:gravity="center"
+                android:text="@string/myshoppingcart"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/product_drawerlist_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/back_btn_normal" />
+
+            <Button
+                android:id="@+id/product_search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/pencil" />
+        </RelativeLayout>
+    </FrameLayout>
+    
+    <FrameLayout
+        android:id="@+id/shoppingcart_search" 
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/shoppingcar_title" >
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+            <EditText
+               android:id="@+id/myshoppingcart_edittext" 
+               android:layout_width="300dp"
+               android:layout_height="40dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="10dp"
+               android:background="@drawable/telphone_text"
+               android:hint="选填，从手机联系人中查找达人手机号码或EMALL获得8%抵用券"
+               />
+            
+            <Button
+                android:id="@+id/myshoppingcart_search_button" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/seek"
+                android:layout_marginLeft="260dp"
+                android:layout_marginTop="5dp"
+                />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/myshoppingcart_edittext"
+                android:textColor="#e04b12"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="测试体验用户累积消费换购丹麦国宝级拉杆箱"/>
+            
+        </RelativeLayout>       
+        
+    </FrameLayout>
+    
+    <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/shoppingcart_id"
+            android:layout_below="@+id/shoppingcart_search" >
+        
+        <ListView
+            android:id="@+id/myshoppingcart_listview" 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        
+    </RelativeLayout>  
+    
+    <RelativeLayout
+        android:id="@+id/shoppingcart_id" 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/myshopping_postage_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="27dp"
+             />
+
+        <Button
+            android:id="@+id/myshopping_price_button"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/myshopping_postage_textView"
+            android:layout_alignBottom="@+id/myshopping_postage_textView"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/sendfor_btn1"
+            android:text="@string/settle_accounts" />
+
+        <TextView
+            android:id="@+id/myshopping_sumprice_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/myshopping_postage_textView"
+            android:layout_alignBottom="@+id/myshopping_postage_textView"
+            android:layout_centerHorizontal="true"
+             />
+       
+    </RelativeLayout>
+ 
+</RelativeLayout>

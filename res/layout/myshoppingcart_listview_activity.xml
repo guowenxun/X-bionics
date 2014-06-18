@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView    
+        android:id="@+id/shoppingcart_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/shoppingcart_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="42dp"
+        android:layout_toRightOf="@+id/shoppingcart_imageView"
+        android:text="mingchen"
+       />
+
+    <TextView
+        android:id="@+id/shoppingcart_color_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/shoppingcart_name_textView"
+        android:layout_below="@+id/shoppingcart_name_textView"
+         android:text="mingchen"/>
+
+    <TextView
+        android:id="@+id/shoppingcart_size_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/shoppingcart_color_textView"
+        android:layout_alignBottom="@+id/shoppingcart_color_textView"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/shoppingcart_color_textView"
+         android:text="mingchen" />
+
+    <TextView
+        android:id="@+id/shoppingcart_price_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/shoppingcart_color_textView"
+        android:layout_below="@+id/shoppingcart_color_textView"
+         android:text="mingchen" />
+
+    <EditText
+        android:id="@+id/shoppingcart_number_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/shoppingcart_price_textView"
+        android:layout_marginRight="20dp"
+      >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>
