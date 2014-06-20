@@ -163,7 +163,11 @@ public class FirstPagerActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.tribesquare_button:
 			break;
-
+		case R.id.search_button:
+			Intent search = new Intent(FirstPagerActivity.this,
+					SearchPagerActivity.class);
+			startActivity(search);
+			break;
 		}
 
 	}

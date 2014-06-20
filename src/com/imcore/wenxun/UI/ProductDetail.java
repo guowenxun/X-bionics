@@ -52,15 +52,6 @@ public class ProductDetail extends ActionBarActivity{
 			Toast.makeText(ProductDetail.this, "Çë¼ì²éÍøÂç£¡", Toast.LENGTH_SHORT).show();
 		}
 		
-		ActionBar actionbar=getSupportActionBar();
-		actionbar.setNavigationMode(actionbar.NAVIGATION_MODE_TABS);
-		
-		for(int i=0;i<mProductCategory.size();i++){
-			Tab tab=actionbar.newTab();
-			tab.setText(mProductCategory.get(i).categoryName);
-			tab.setTabListener(mtablistener);
-			actionbar.addTab(tab);
-		}
 	}
 	
 	private class ProductCategoryAynsyTask extends AsyncTask<Integer,Void,Void>{
@@ -95,13 +86,16 @@ public class ProductDetail extends ActionBarActivity{
 
 		@Override
 		protected void onPostExecute(Void result) {
-			super.onPostExecute(result);
-		}
-		
-		
-		
-		
-		
+			super.onPostExecute(result);			
+			ActionBar actionbar=getSupportActionBar();
+			actionbar.setNavigationMode(actionbar.NAVIGATION_MODE_TABS);			
+			for(int i=0;i<mProductCategory.size();i++){
+				Tab tab=actionbar.newTab();
+				tab.setText(mProductCategory.get(i).categoryName);
+				tab.setTabListener(mtablistener);
+				actionbar.addTab(tab);
+			}
+		}		
 		
 	}
 

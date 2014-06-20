@@ -13,6 +13,7 @@ import com.imcore.wenxun.util.ToastUtil;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -68,8 +69,8 @@ public class TribeLoginActivity extends Activity implements OnClickListener{
 		protected void doLogin() {
 		  
 			if (ConnectivityUtil.isOnline(this)) {
-				String UserName = userEditText.getText().toString().trim();
-				String Password = passwordEditText.getText().toString().trim();
+				String UserName = userEditText.getText().toString();
+				String Password = passwordEditText.getText().toString();
 				
 				new LoginTask(UserName, Password).execute();
 			} else {
@@ -96,7 +97,7 @@ public class TribeLoginActivity extends Activity implements OnClickListener{
 				args.put("phoneNumber", mUserName);
 				args.put("password", mPassword);
 				args.put("client", "android");
-
+				args.put("device", "sent");
 				
 				RequestEntity entity = new RequestEntity(url, args);
 				String jsonResponse = null;
@@ -118,9 +119,17 @@ public class TribeLoginActivity extends Activity implements OnClickListener{
 
 				if (resEntity.getStatus() == 200) {
 					String jsonData = resEntity.getData();
-					Log.i("user", jsonData);
 					userId = JsonUtil.getJsonValueByKey(jsonData, "id");
 					token = JsonUtil.getJsonValueByKey(jsonData, "token");
+					
+					SharedPreferences preferences = getSharedPreferences("config",
+							MODE_PRIVATE);
+					if (!preferences.getString("userId", "").equals(mUserName)) {
+						SharedPreferences.Editor editor = preferences.edit();
+						editor.putString("username", mUserName);
+						editor.putString("password", mPassword);
+						editor.commit();
+					}
 					
 					Intent intent = new Intent(TribeLoginActivity.this,
 							FirstPagerActivity.class);
