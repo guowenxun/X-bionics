@@ -153,7 +153,7 @@ public class FirstPagerActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.product_buy_button:
 			Intent product = new Intent(FirstPagerActivity.this,
-					SearchPagerActivity.class);
+					ProductBuyActivity.class);
 			startActivity(product);
 			break;
 		case R.id.X_introduce_button:
