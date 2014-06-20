@@ -3,6 +3,7 @@ encoding//src/com/imcore/wenxun/HTTP/HttpHelper.java=UTF-8
 encoding//src/com/imcore/wenxun/HTTP/MultipartFormEntity.java=UTF-8
 encoding//src/com/imcore/wenxun/HTTP/RequestEntity.java=UTF-8
 encoding//src/com/imcore/wenxun/HTTP/ResponseJsonEntity.java=UTF-8
+encoding//src/com/imcore/wenxun/UI/ProductInformationActivity.java=UTF-8
 encoding//src/com/imcore/wenxun/image/ImageCache.java=UTF-8
 encoding//src/com/imcore/wenxun/image/ImageFetcher.java=UTF-8
 encoding//src/com/imcore/wenxun/image/StorageHelper.java=UTF-8

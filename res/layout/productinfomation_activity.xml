@@ -69,7 +69,7 @@
 	        android:layout_marginLeft="10dp"
 	        android:gravity="center_vertical"
 	        />
-	</RelativeLayout>
+	    </RelativeLayout>
 	
 		<LinearLayout
 		    android:layout_width="match_parent"
@@ -350,7 +350,7 @@
                 </LinearLayout>
                 
                 <ListView
-                    android:id="@+id/lv_size"
+                    android:id="@+id/productinformation_listview_sizeid"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"/>
 
@@ -359,7 +359,8 @@
      </LinearLayout>
      
      <RelativeLayout
-        android:layout_width="match_parent"
+           android:layout_above="@+id/scienceId"
+           android:layout_width="match_parent"
            android:layout_height="30dp"
            android:background="#E04B11">
 	    <TextView
@@ -370,6 +371,18 @@
 	        android:gravity="center_vertical"
 	        android:text="科技点"/>
 	</RelativeLayout>
+	
+	<RelativeLayout 
+	    android:id="@+id/scienceId"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    >
+     <ListView
+         android:id="@+id/productinformation_science_listview"
+         android:layout_width="match_parent"
+	     android:layout_height="match_parent"
+	     />
+     </RelativeLayout>
     </LinearLayout>
    </ScrollView>
   </LinearLayout>

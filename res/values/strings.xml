@@ -27,5 +27,11 @@
     <string name="myshoppingcart">我的购物车</string>
     <string name="settle_accounts">结算</string>
     <string name="product_information">商品信息</string>
+    <string name="share">分享</string>
+    <string name="shoppingcart">购物车</string>
+    <string name="buy">购买</string>
+    <string name="collection">收藏</string>
+   
+    
 
 </resources>

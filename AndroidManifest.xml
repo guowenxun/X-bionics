@@ -41,6 +41,8 @@
         <activity android:name="com.imcore.wenxun.UI.IntroductionHomeActivity"/>
         <activity android:name="com.imcore.wenxun.UI.ProductBuyActivity"/>
         <activity android:name="com.imcore.wenxun.UI.ClassifyAndSearch"/>
+         <activity android:name="com.imcore.wenxun.UI.ProductInformationActivity"/>
+         <activity android:name="com.imcore.wenxun.UI.MyShoppingCart"/>
        
     </application>
 

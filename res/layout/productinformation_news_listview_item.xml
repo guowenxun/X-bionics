@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/productinformation_news_item_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/productinformation_news_item_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/productinformation_news_item_imageView"
+        android:layout_marginLeft="38dp"
+        android:layout_toRightOf="@+id/productinformation_news_item_imageView"
+         />
+
+    <TextView
+        android:id="@+id/productinformation_news_item_time_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/productinformation_news_item_imageView"
+        android:layout_alignLeft="@+id/productinformation_news_item_name_textView"
+       />
+    
+</RelativeLayout>

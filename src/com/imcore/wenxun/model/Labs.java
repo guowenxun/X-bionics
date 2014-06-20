@@ -1,6 +1,7 @@
 package com.imcore.wenxun.model;
 
 public class Labs {
+	
 	public int id;
 	public String body;
 	public String imageUrl;

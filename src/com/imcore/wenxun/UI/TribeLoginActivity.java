@@ -26,7 +26,8 @@ public class TribeLoginActivity extends Activity implements OnClickListener{
 	
 	private EditText userEditText,passwordEditText;
 	private Button enterButton,forgerButton,backButton;
-	
+	public static String userId;
+	public static String token;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -118,8 +119,8 @@ public class TribeLoginActivity extends Activity implements OnClickListener{
 				if (resEntity.getStatus() == 200) {
 					String jsonData = resEntity.getData();
 					Log.i("user", jsonData);
-					String userId = JsonUtil.getJsonValueByKey(jsonData, "id");
-					String token = JsonUtil.getJsonValueByKey(jsonData, "token");
+					userId = JsonUtil.getJsonValueByKey(jsonData, "id");
+					token = JsonUtil.getJsonValueByKey(jsonData, "token");
 					
 					Intent intent = new Intent(TribeLoginActivity.this,
 							FirstPagerActivity.class);
